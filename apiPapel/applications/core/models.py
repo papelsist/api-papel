@@ -2,6 +2,8 @@ from django.db import models
 import uuid
 import datetime
 
+
+
 # Managers
 from .managers import (
     ClienteManager,
@@ -369,3 +371,4 @@ class Folio(models.Model):
     class Meta:
         managed = False
         db_table = 'folio'
+

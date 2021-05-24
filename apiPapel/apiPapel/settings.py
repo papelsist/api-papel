@@ -46,16 +46,26 @@ ALLOWED_HOSTS = [
 
 # Application definition
 
-INSTALLED_APPS = [
-    'django.contrib.admin',
+DJANGO_APPS = ['django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'corsheaders',
+    'django.contrib.staticfiles'
+    ]
+
+LOCAL_APPS = [
     'applications.core',
+    'applications.reports',
+    'applications.authentication'
 ]
+
+THIRD_PARTY_APPS = [
+    'corsheaders',
+    'rest_framework'
+]
+
+INSTALLED_APPS =  DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
